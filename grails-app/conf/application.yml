@@ -105,3 +105,9 @@ grails:
         defaultScope: singleton
     converters:
         encoding: UTF-8
+
+---
+grails:
+    databinding:
+        dateFormats:
+            -  "yyyy-MM-dd"

@@ -1,10 +1,8 @@
 package grails3.showcase
 
-
-import grails.rest.*
-
-@Resource(readOnly = false, formats = ['json', 'xml'])
 class User {
+    static hasMany = [trips: Trip]
+
     String login
     String password
     String name

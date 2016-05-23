@@ -8,7 +8,9 @@ class UrlMappings {
 //                // apply constraints here
 //            }
 //        }
-        "/user"(resources: "user")
+        "/user"(resources: "user") {
+            "/trip"(resources: "trip")
+        }
 
         "/"(view: '/index')
         "500"(view: '/error')
