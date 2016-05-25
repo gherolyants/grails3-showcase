@@ -9,4 +9,21 @@ class TripController extends RestfulController {
     TripController() {
         super(Trip)
     }
+
+    @Override
+    protected Object queryForResource(Serializable id) {
+        User.get(params.userId).trips.find { it.id == id }
+    }
+
+    @Override
+    protected List listAllResources(Map params) {
+        User.get(params.userId).trips as List
+    }
+
+    @Override
+    protected Object createResource() {
+        def trip = super.createResource() as Trip
+        User.get(params.userId).addToTrips(trip)
+        trip
+    }
 }
