@@ -111,3 +111,8 @@ grails:
     databinding:
         dateFormats:
             -  "yyyy-MM-dd"
+
+environments:
+    test:
+        server:
+            port: 0
