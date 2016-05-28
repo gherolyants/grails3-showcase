@@ -25,10 +25,6 @@ class TripFunctionalSpec extends GebSpec {
         userId = User.buildWithoutSave(login: 'lennon').save(flush: true).id
     }
 
-    void cleanup() {
-        User.findById(userId).delete()
-    }
-
     RestBuilder getRestBuilder() {
         new RestBuilder()
     }
