@@ -89,6 +89,7 @@ class TripFunctionalSpec extends GebSpec {
         when:"When the show action is called to retrieve a resource"
         def response = restBuilder.get(resourcePath) {
             accept MimeType.JSON.name
+            header ACCEPT_VERSION
         }
 
         then:"The response is correct"

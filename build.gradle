@@ -13,7 +13,7 @@ buildscript {
         classpath "gradle.plugin.com.craigburke.gradle:bower-installer-gradle:2.5.1"
         classpath "org.grails.plugins:hibernate4:5.0.6"
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.8.2"
-        classpath "org.grails.plugins:views-gradle:1.0.11"
+        classpath "org.grails.plugins:views-gradle:1.1.0.M1"
     }
 }
 

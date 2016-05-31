@@ -8,7 +8,10 @@ class UrlMappings {
 //                // apply constraints here
 //            }
 //        }
-        "/user"(resources: "user") {
+        "/user"(resources: 'user', namespace: 'v1') {
+            "/trip"(resources: "trip")
+        }
+        "/user"(version: 'v2', resources: 'user', namespace: 'v2') {
             "/trip"(resources: "trip")
         }
 

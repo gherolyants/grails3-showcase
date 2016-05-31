@@ -1,0 +1,7 @@
+import grails3.showcase.User
+
+model {
+	User user
+}
+
+json g.render(user, [includes: ['login']])

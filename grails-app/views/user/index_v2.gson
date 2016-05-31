@@ -1,0 +1,7 @@
+import grails3.showcase.User
+
+model {
+	Iterable<User> userList
+}
+
+json g.render(template: '/user/user-short_v2', collection: userList ?: [], var: 'user')
