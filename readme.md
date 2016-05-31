@@ -88,9 +88,11 @@
 * добавить и продемонстрировать console plugin
 * переопределить метод findTrips следующим образом:
 
-	ctx.tripService.metaClass.findTrips = { String a, Date b, Integer c ->
-	    []
-	}
+
+    `ctx.tripService.metaClass.findTrips = { String a, Date b, Integer c ->
+        []
+    }`
+
 	
 ## Заключение
 * рассказать об asset-pipeline-plugin
