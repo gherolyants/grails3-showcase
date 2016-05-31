@@ -9,6 +9,13 @@ class TripController {
 
     def index() {
         def date = Date.parse('yyyy-mm-dd', params.date)
-        render(Trip.findAllByDestinationLikeAndStartLessThanAndEndGreaterThan("%$params.destination%", date, date) as JSON)
+//        def trips = Trip.findAllByDestinationLikeAndStartLessThanAndEndGreaterThan("%$params.destination%", date, date)
+        def query = Trip.where {
+            destination like "%$params.destination%"
+            start <= date
+            end >= date
+            user.age == params.age as Integer
+        }
+        render(query.list() as JSON)
     }
 }
