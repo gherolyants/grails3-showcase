@@ -75,6 +75,7 @@ dependencies {
     profile "org.grails.profiles:angular:3.1.6"
     runtime "com.h2database:h2"
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.8.2"
+    runtime 'org.grails.plugins:grails-console:2.0.5'
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails.plugins:geb"
     testCompile "org.grails:grails-datastore-rest-client"

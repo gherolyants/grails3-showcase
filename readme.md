@@ -83,3 +83,11 @@
 * продемонстрировать различные возможности GORM по поиску (dynamic finders, where) рассказать про использование Hibernate Criteria API и HQL
 * выделить метод поиска в сервис
 * возвращать ошибку 422 если один из параметров поиска не задан
+
+## Шаг 10. Console
+* добавить и продемонстрировать console plugin
+* переопределить метод findTrips следующим образом:
+
+	ctx.tripService.metaClass.findTrips = { String a, Date b, Integer c ->
+	    []
+	}
