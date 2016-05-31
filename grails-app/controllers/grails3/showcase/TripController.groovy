@@ -3,27 +3,12 @@ package grails3.showcase
 
 import grails.rest.*
 import grails.converters.*
+import grails3.showcase.Trip
 
-class TripController extends RestfulController {
-    static responseFormats = ['json', 'xml']
-    TripController() {
-        super(Trip)
-    }
+class TripController {
 
-    @Override
-    protected Object queryForResource(Serializable id) {
-        User.get(params.userId).trips.find { it.id == id }
-    }
-
-    @Override
-    protected List listAllResources(Map params) {
-        User.get(params.userId).trips as List
-    }
-
-    @Override
-    protected Object createResource() {
-        def trip = super.createResource() as Trip
-        User.get(params.userId).addToTrips(trip)
-        trip
+    def index() {
+        def date = Date.parse('yyyy-mm-dd', params.date)
+        render(Trip.findAllByDestinationLikeAndStartLessThanAndEndGreaterThan("%$params.destination%", date, date) as JSON)
     }
 }

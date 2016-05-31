@@ -6,10 +6,10 @@ import grails.test.mixin.*
 import spock.lang.*
 import static org.springframework.http.HttpStatus.*
 
-@TestFor(TripController)
+@TestFor(UserTripController)
 @Mock([Trip, User])
 @Build([Trip, User])
-class TripControllerSpec extends Specification {
+class UserTripControllerSpec extends Specification {
 
     def jimmyPage, johnLennon
 
