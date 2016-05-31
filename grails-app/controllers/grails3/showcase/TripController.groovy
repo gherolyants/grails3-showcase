@@ -4,10 +4,12 @@ package grails3.showcase
 import grails.rest.*
 import grails.converters.*
 import grails3.showcase.Trip
+import groovy.util.logging.Slf4j
 import org.springframework.http.HttpStatus
 
 import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY
 
+@Slf4j
 class TripController {
 
     TripService tripService
@@ -15,6 +17,7 @@ class TripController {
     def index() {
         if (!params.date || !params.destination || !params.age) {
             render status: UNPROCESSABLE_ENTITY, message: 'All date, destination and age should be provided'
+            log.info "date: $params.date, destination: $params.destination, age: $params.age"
             return
         }
 

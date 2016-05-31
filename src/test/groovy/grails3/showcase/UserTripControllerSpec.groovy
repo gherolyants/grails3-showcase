@@ -43,7 +43,7 @@ class UserTripControllerSpec extends Specification {
         request.method = 'POST'
         params.userId = user.id
         request.json = new Trip(destination: "Manhattan",
-                start: Date.parse('YYYY-MM-DD', '2016-01-02')) as JSON
+                start: Date.parse('yyyy-MM-dd', '2016-01-02')) as JSON
         controller.save()
 
         then: "error is returned"
@@ -60,8 +60,8 @@ class UserTripControllerSpec extends Specification {
         request.method = 'POST'
         params.userId = user.id
         request.json = new Trip(destination: "Manhattan",
-                start: Date.parse('YYYY-MM-DD', '2016-01-02'),
-                end: Date.parse('YYYY-MM-DD', '2016-02-02')) as JSON
+                start: Date.parse('yyyy-MM-dd', '2016-01-02'),
+                end: Date.parse('yyyy-MM-dd', '2016-02-02')) as JSON
         controller.save()
 
         then: "entity is created in the database"

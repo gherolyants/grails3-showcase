@@ -3,11 +3,11 @@ package grails3.showcase
 class UrlMappings {
 
     static mappings = {
-//        "/$controller/$action?/$id?(.$format)?"{
-//            constraints {
-//                // apply constraints here
-//            }
-//        }
+        "/$controller/$action?/$id?(.$format)?"{
+            constraints {
+                // apply constraints here
+            }
+        }
         "/user"(resources: 'user', namespace: 'v1') {
             "/trip"(resources: "userTrip")
         }

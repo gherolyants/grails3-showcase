@@ -91,3 +91,8 @@
 	ctx.tripService.metaClass.findTrips = { String a, Date b, Integer c ->
 	    []
 	}
+	
+## Заключение
+* рассказать об asset-pipeline-plugin
+* показать команды grails для работы с angular
+* рассказать о karma plugin
