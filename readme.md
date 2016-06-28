@@ -80,7 +80,7 @@
 * переименовать TripController в UserTripController
 * создать TripController
 * реализовать метод index для поиска отпусков по локации и датам 
-* продемонстрировать различные возможности GORM по поиску (dynamic finders, where) рассказать про использование Hibernate Criteria API и HQL
+* продемонстрировать различные возможности GORM по поиску (dynamic finders, where) ~~рассказать про использование Hibernate Criteria API и HQL~~
 * выделить метод поиска в сервис
 * возвращать ошибку 422 если один из параметров поиска не задан
 
